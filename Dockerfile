@@ -56,11 +56,12 @@ RUN cd /tmp \
     && chmod -R 777 /usr \
     && mkdir -p /opt/nos3 \
     && cd /opt/nos3 \
-    && git clone https://github.com/ericstoneking/42.git --depth=1 \
-    && cd /opt/nos3/42 \
-    && git reset --hard d4547dae44270876657aec009fe59980082ed999 \
-    && cd /opt/nos3/42 \
-    && sed 's/ARCHFLAG =/ARCHFLAG=-m32 /; s/LFLAGS = -L/LFLAGS = -m32 -L/; s/#GLUT_OR_GLFW = _USE_GLUT_/GLUT_OR_GLFW = _USE_GLUT_/' -i /opt/nos3/42/Makefile \
-    && make \
     && ln -s /usr/lib/libnos_engine_client.so /usr/lib/libnos_engine_client_cxx11.so \
     && chmod -R 777 /opt
+
+    # && git clone https://github.com/ericstoneking/42.git --depth=1 \
+    # && cd /opt/nos3/42 \
+    # && git reset --hard d4547dae44270876657aec009fe59980082ed999 \
+    # && cd /opt/nos3/42 \
+    # && sed 's/ARCHFLAG =/ARCHFLAG=-m32 /; s/LFLAGS = -L/LFLAGS = -m32 -L/; s/#GLUT_OR_GLFW = _USE_GLUT_/GLUT_OR_GLFW = _USE_GLUT_/' -i /opt/nos3/42/Makefile \
+    # && make \
