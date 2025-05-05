@@ -9,8 +9,7 @@
 FROM ubuntu:focal-20230801 AS nos0
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN dpkg --add-architecture i386 \
-    && apt-get update -y \
+RUN apt-get update -y \
     && apt-get install -y \
         cmake \
         g++-multilib \
