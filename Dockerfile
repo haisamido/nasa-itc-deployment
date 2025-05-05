@@ -16,27 +16,27 @@ RUN dpkg --add-architecture i386 \
         g++-multilib \
         gcc-multilib \
         git \
-		gdb \
+	gdb \
         python-apt \
         python3-dev \
         python3-pip \
         dwarves \
-        freeglut3-dev:i386 \
+        freeglut3-dev \
         lib32z1 \
-        libboost-dev:i386 \
-        libboost-system-dev:i386 \
-        libboost-program-options-dev:i386 \
-        libboost-filesystem-dev:i386 \
-        libboost-thread-dev:i386 \
-        libboost-regex-dev:i386 \
+        libboost-dev \
+        libboost-system-dev \
+        libboost-program-options-dev \
+        libboost-filesystem-dev \
+        libboost-thread-dev \
+        libboost-regex-dev \
         libgtest-dev \
-        libicu-dev:i386 \
+        libicu-dev \
         libncurses5-dev \
-        libreadline-dev:i386 \
+        libreadline-dev \
         libsocketcan-dev \
         libxerces-c-dev \
         wget \
-		netcat \
+	netcat \
     && rm -rf /var/lib/apt/lists/*
 
 FROM nos0 AS nos1
